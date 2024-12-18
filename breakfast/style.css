@@ -1,0 +1,172 @@
+button {
+    background-color: #ffffff;
+}
+
+body{
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+}
+
+header{
+    width: 100%;
+    height: 117px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px#00c3ff;
+    background: rgb(140, 219, 219);
+}
+
+header .search{
+    flex:1 ;
+    position: relative;
+}
+
+.search input{
+    width: 79%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: rgb(121, 121, 121);
+    
+}
+
+.search-box input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+.search button{
+    cursor: pointer;
+    width: 70px;
+    height: 60px;
+    border-radius: 80px;
+    border: none;
+    position:unset ;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: rgba(0, 255, 255, 0.562);
+}
+
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+header ul li a:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+header.menu{
+    font-size: 2.5em;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .search-box button {
+        position: absolute;
+    }
+    header ul {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    header .menu {
+        display: block;
+    }
+}
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    display: none; /* Hidden by default */
+  }
+
+  .chat-header {
+    background-color: #5ee4ee;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+  }
+
+  .chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #e00909;
+  }
+
+  .chat-input {
+    padding: 10px;
+  }
+
+  .chat-input input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .chat-input button {
+    padding: 8px 10px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .chat-toggle-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #57da91f5;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }                                      
